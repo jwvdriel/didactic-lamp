@@ -1,0 +1,438 @@
+:root {
+    /* primary colors */
+    --soft-orange: #e9ab53;
+    --soft-red: #f15e50;
+
+    /* neutral colors */
+    --Off-white: #fffdfa;
+    --Grayish-blue: #c5c6ce;
+    --Dark-grayish-blue: #5d5f79;
+    --Very-dark-blue: #00001a;
+
+    /* fonts */
+    --page-font: 'Inter', sans-serif;
+}
+
+body {
+    margin: 1rem auto 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 90%;
+    font-family: var(--page-font);
+}
+
+/* link active change to certain color */
+.navigation-links-list a:active {
+    color: var(--soft-red);
+}
+
+.active-button button:active {
+    background-color: var(--Very-dark-blue);
+}
+
+.news-item-header a:active {
+    color: var(--soft-orange);
+}
+
+.computer-news-text h3 a:active {
+    color: var(--soft-red);
+}
+
+/* mobile design */
+@media only screen and (max-width: 420px) {
+    #navigation-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.3rem;
+    }
+
+    .brand-logo-heading {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .navigation-links {
+        display: none;
+    }
+
+    #web-image-3 {
+        background: url(/static/images/image-web-3-mobile.jpg) no-repeat;
+        background-size: contain;
+        background-position: center;
+        height: 18.75rem;
+    }
+
+    .main-header-text {
+        margin-bottom: 2.5rem;
+    }
+
+    .main-header-heading {
+        margin-bottom: 0;
+        font-size: 2.8rem;
+        font-weight: 800;
+        line-height: 1;
+        color: var(--Very-dark-blue);
+    }
+
+    .main-header-paragraph {
+        font-size: 0.96rem;
+        font-weight: 400;
+        color: var(--Dark-grayish-blue);
+        margin-bottom: 1.7rem;
+    }
+
+    .main-header-text button {
+        border: none;
+        outline: none;
+        background-color: var(--soft-red);
+        color: var(--Off-white);
+        font-weight: 800;
+        font-size: 1.05rem;
+        height: 3.2rem;
+        width: 12rem;
+        letter-spacing: 0.2rem;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    .news-articles-column {
+        margin-top: 4.2rem;
+        background-color: var(--Very-dark-blue);
+    }
+
+    .heading-article {
+        color: var(--soft-orange);
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin: 0;
+        padding: 1.5rem 0 0 1.5rem;
+    }
+
+    .news-item {
+        padding: 1.5rem 0 0 1.5rem;
+        /* font-weight: 400; */
+        width: 85%;
+    }
+
+    .news-item-header {
+        font-size: 1.33rem;
+        font-weight: 800;
+    }
+
+    .news-item-header a {
+        color: var(--Off-white);
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .news-item-paragraph {
+        color: var(--Grayish-blue);
+        font-size: 0.9rem;
+        font-weight: 400;
+        line-height: 2;
+    }
+
+    hr {
+        border: 0;
+        height: 1px;
+        background-color: var(--Grayish-blue);
+    }
+
+    .news-item-paragraph:last-of-type {
+        padding-bottom: 1.5rem;
+        margin-bottom: 0;
+    }
+
+    /* images computer news */
+    #retro-pc {
+        background: url(/static/images/image-retro-pcs.jpg) no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 15.87rem;
+        height: 12.75rem;
+    }
+
+    #top-laptop {
+        background: url(/static/images/image-top-laptops.jpg) no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 12.87rem;
+        height: 12.75rem;
+    }
+
+    #gaming-growth {
+        background: url(/static/images/image-gaming-growth.jpg) no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 14.87rem;
+        height: 12.75rem;
+    }
+
+    /* end computer news images */
+
+    #computer-news {
+        margin: 4.2rem 0 4.2rem 0;
+    }
+
+    .flex-layout-computer-news {
+        display: flex;
+        align-items: center;
+    }
+
+    .computer-news-text {
+        margin-left: 1rem;
+    }
+
+    .computer-news-text h2 {
+        color: var(--Grayish-blue);
+        font-size: 2rem;
+        margin: 0.8rem 0 0 0;
+    }
+
+    .computer-news-text h3 {
+        font-weight: 800;
+        font-size: 1rem;
+        margin-bottom: 0;
+    }
+
+    .computer-news-text h3 a {
+        text-decoration: none;
+        color: var(--Very-dark-blue);
+        cursor: pointer;
+    }
+
+    .computer-news-text p {
+        color: var(--Dark-grayish-blue);
+        font-weight: 400;
+        font-size: 0.96rem;
+    }
+}
+
+
+/* desktop design */
+@media only screen and (min-width: 421px) {
+    body {
+        width: 90%;
+    }
+
+    #navigation-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 3.5rem 0 3.5rem 0;
+    }
+
+    .brand-logo {
+        width: 100%;
+    }
+
+    .brand-logo-heading {
+        font-size: 4rem;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .menu-hamburger {
+        width: 100%;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+
+    /* unless mobile design it is display show */
+    .menu-hamburger img {
+        display: none;
+    }
+
+    .navigation-links ul {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+
+    .navigation-links-list {
+        list-style: none;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .navigation-links-list a {
+        text-decoration: none;
+        color: var(--Dark-grayish-blue);
+        padding-right: 2.7rem;
+        font-size: 1.3rem;
+    }
+
+    .last-link {
+        padding-right: 0 !important;
+    }
+
+    .main-container {
+        display: grid;
+        grid-template-columns: 1fr 25%;
+        grid-gap: 3rem;
+    }
+
+    .image-web {
+        background: url(/static/images/image-web-3-desktop.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 25rem;
+        width: 100%;
+    }
+
+    .main-header-text {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .main-header-heading {
+        font-size: 6rem;
+        line-height: 1;
+        color: var(--Very-dark-blue);
+        font-weight: 800;
+        margin-bottom: 0;
+    }
+
+    .main-header-paragraph {
+        color: var(--Dark-grayish-blue);
+        font-size: 1.7rem;
+        font-weight: 400;
+        margin: 5rem 0 3rem 1.5rem;
+
+    }
+
+    .main-header-text button {
+        border: none;
+        outline: none;
+        background-color: var(--soft-red);
+        color: var(--Off-white);
+        font-weight: 800;
+        font-size: 1.05rem;
+        height: 4rem;
+        width: 20rem;
+        letter-spacing: 0.2rem;
+        padding: 0;
+        cursor: pointer;
+        margin: 2.5rem 0 0 1.5rem;
+    }
+
+    .news-articles-column {
+        height: 100%;
+        background-color: var(--Very-dark-blue);
+    }
+
+    .heading-article {
+        padding: 2.5rem 0 0 2rem;
+        margin: 0;
+        color: var(--soft-orange);
+        font-size: 3rem;
+    }
+
+    .news-item {
+        padding: 3.3rem 2rem 0 2rem;
+    }
+
+    .news-item-header a {
+        color: var(--Off-white);
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .news-item-paragraph {
+        color: var(--Grayish-blue);
+        font-size: 1.14rem;
+        font-weight: 400;
+        line-height: 1.5;
+        margin-top: 0;
+    }
+
+    hr {
+        border: 0;
+        height: 1px;
+        background-color: var(--Grayish-blue);
+        margin: 2.5rem 0 0 0;
+    }
+
+    #computer-news {
+        margin-top: 6rem;
+    }
+
+    .computer-news-container {
+        display: grid;
+        grid-template-columns: 33.3% 33.3% 33.3%;
+        grid-gap: 4.5rem;
+        margin-bottom: 6rem;
+    }
+
+    /* images computer news */
+    #retro-pc {
+        background: url(/static/images/image-retro-pcs.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    #top-laptop {
+        background: url(/static/images/image-top-laptops.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    #gaming-growth {
+        background: url(/static/images/image-gaming-growth.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* end computer news images */
+    .flex-layout-computer-news {
+        display: flex;
+        height: 100%;
+    }
+
+    .computer-news-text {
+        margin-left: 1.5rem;
+    }
+
+    .computer-news-text h2 {
+        color: var(--Grayish-blue);
+        font-size: 2.5rem;
+        margin: 0;
+    }
+
+    .computer-news-text h3 {
+        font-weight: 800;
+        font-size: 1.2rem;
+        margin-bottom: 0;
+    }
+
+    .computer-news-text h3 a {
+        text-decoration: none;
+        color: var(--Very-dark-blue);
+        cursor: pointer;
+    }
+
+    .computer-news-text p {
+        color: var(--Dark-grayish-blue);
+        font-weight: 400;
+        width: 60%;
+        margin-bottom: 0;
+        line-height: 1.5;
+
+    }
+
+    .computer-news-images {
+        width: 33.3%;
+        height: 100%;
+    }
+
+    .computer-news-images img {
+        width: 33%;
+        height: 60%;
+    }
+
+    .last-image {
+        margin-right: 0 !important;
+    }
+}
