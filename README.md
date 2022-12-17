@@ -50,7 +50,6 @@ Javascript
 Jinja
 
 - [CSS tricks](https://css-tricks-com) - This helped me for using and get a better understading about the grid-layouts and manipulation. I really   liked this pattern and will use it going forward.
-- [](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 ## Author
 
