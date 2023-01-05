@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creditCard form</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- javascript -->
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+
+<body>
+    <header>
+        <!-- images illustrated in css just empty elements -->
+        <div class="container ">
+            <div class="background-imageCard-back">
+                <div class="number-cardNumber-back">
+                    <p>000</p>
+                </div>
+            </div>
+        </div>
+        <div class="background-imageCard-front">
+            <div class="front-card-logo">
+                <div class="creditCard-number">
+                    <p>0000 0000 0000 0000</p>
+                    <div class="creditCard-text">
+                        <p id="paragraph">jane appleseed</p>
+                        <p id="date">00/00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="forum-section">
+        <form action="/submitted" method="POST">
+            <div class="creditCard-name">
+                <p class="creditCard-name-text">kaarthouder naam</p>
+                <input type="text" name="name-card" id="input-name-text" placeholder="e.g. Jane Appleseed">
+            </div>
+            <div class="creditCard-number-input">
+                <p class="creditCard-number-choice">kaart nummer</p>
+                <input type="text" name="number-card" id="card-number-input" placeholder="e.g. 1234 5678 9123 0000">
+                <p class="error-message">wrong format, numbers only</p>
+            </div>
+            <div class="experation-date">
+                <div class="layout-space-between">
+                    <p class="experation-date-input">exp. date (mm/yy)</p>
+                    <div class="layout-date">
+                        <div class="layout-error">
+                            <input type="number" name="month" id="month-input" placeholder="MM">
+                        </div>
+                        <div class="layout-error">
+                            <input type="number" name="year" id="year-input" placeholder="YY">
+                        </div>
+                    </div>
+                    <p class="error-message">can't be blank</p>
+                </div>
+
+                <div class="bottom-layout">
+                    <p class="card-verification">cvc</p>
+                    <input type="text" name="verication-number" id="verication-input" placeholder="e.g. 123">
+                    <div>
+                        <p class="error-message">can't be blank</p>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" id="button-submit">Bevestig</button>
+        </form>
+    </section>
+</body>
+
+</html>

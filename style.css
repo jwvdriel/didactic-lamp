@@ -1,0 +1,340 @@
+:root {
+    /* Front-end Style Guide */
+
+    /* The designs were created to the following widths: */
+
+    /* - Mobile: 375px */
+    /* - Desktop: 1440px */
+
+    /* Colors */
+    /* Primary */
+    --ActiveInputBorder: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+    --RedInputErrors: hsl(0, 100%, 66%);
+    --Neutral: hsl(0, 0%, 100%);
+    --LightGrayishViolet: hsl(270, 3%, 87%);
+    --DarkGrayishViolet: hsl(279, 6%, 55%);
+    --VeryDarkViolet: hsl(278, 68%, 11%);
+
+    /* ## Typography ###  */
+    --BodyCopyFontSize: 18px;
+
+    /* Font - Family: */
+    /* [Space Grotesk] */
+    --FontFamily: 'Space Grotesk', sans-serif;
+    --FontWeights: 500;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    font-family: var(--FontFamily);
+}
+
+/* mobile design */
+
+header {
+    min-height: 40vh;
+}
+
+.container {
+    height: 30vh;
+    background: url(/static/images/bg-main-mobile.png) no-repeat;
+    background-size: cover;
+}
+
+.background-imageCard-back {
+    height: 20vh;
+    width: 100%;
+    background: url(/static/images/bg-card-back.png) no-repeat;
+    background-size: contain;
+    background-position: right;
+    position: relative;
+    top: 2.5rem;
+    right: 1.2rem;
+}
+
+.number-cardNumber-back>p {
+    color: var(--Neutral);
+    position: relative;
+    left: 21.7rem;
+    top: 5rem;
+    margin: 0;
+    display: inline;
+}
+
+.background-imageCard-front {
+    height: 19vh;
+    width: 90%;
+    background: url(/static/images/bg-card-front.png) no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 8.8rem;
+    left: 2rem;
+}
+
+.front-card-logo {
+    width: 90%;
+    height: 3.5vh;
+    background: url(/static/images/card-logo.svg) no-repeat;
+    background-size: contain;
+    position: relative;
+    top: 1rem;
+    left: 1rem;
+}
+
+.creditCard-number>p {
+    position: relative;
+    color: var(--Neutral);
+    font-size: 1.4rem;
+    top: 4rem;
+    font-weight: var(--FontWeights);
+    letter-spacing: 1.5px;
+}
+
+.creditCard-text {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    position: relative;
+    top: 3.5rem;
+}
+
+#paragraph,
+#date {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    color: var(--Neutral);
+    letter-spacing: 1px;
+}
+
+#forum-section {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.creditCard-name-text,
+.creditCard-number-choice,
+.experation-date-input,
+.card-verification {
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--DarkGrayishViolet);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.experation-date {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+input {
+    font-size: 1.2rem;
+    border: 2px solid var(--LightGrayishViolet);
+    border-radius: 10px;
+    padding: 0.7rem 0 0.7rem 0.7rem;
+    width: 95%;
+    font-weight: 700;
+    outline: none;
+    color: var(--VeryDarkViolet);
+}
+
+input:focus {
+    border: 2px solid var(--DarkGrayishViolet);
+    cursor: pointer
+}
+
+::placeholder {
+    color: var(--LightGrayishViolet);
+    cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+    color: var(--LightGrayishViolet);
+    cursor: pointer;
+}
+
+::-moz-placeholder {
+    color: var(--LightGrayishViolet);
+    cursor: pointer;
+}
+
+.layout-space-between {
+    margin-right: 0.5rem;
+}
+
+.layout-date {
+    display: flex;
+}
+
+.layout-error:last-child {
+    margin-left: 1.5rem;
+}
+
+#month-input,
+#year-input {
+    width: 90%;
+}
+
+.bottom-layout {
+    margin-left: 0.5rem;
+    width: 90%;
+}
+
+#button-submit {
+    outline: none;
+    height: 3.5rem;
+    width: 98.5%;
+    border-radius: 10px;
+    border: 2px solid var(--VeryDarkViolet);
+    background-color: var(--VeryDarkViolet);
+    color: var(--LightGrayishViolet);
+    font-size: 1.125rem;
+    text-transform: capitalize;
+    margin: 2rem auto;
+    cursor: pointer;
+}
+
+
+/* desktop design */
+@media (min-width: 576px) {
+    body {
+        display: grid;
+        grid-template-columns: 30% 1fr;
+    }
+
+    .container {
+        height: 100vh;
+        background: url(/static/images/bg-main-mobile.png) no-repeat;
+        background-size: cover;
+        background-position: top, right;
+    }
+
+    #forum-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    form {
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    input {
+        font-size: 1.2rem;
+        border: 2px solid var(--LightGrayishViolet);
+        border-radius: 10px;
+        padding: 0.7rem 0 0.7rem 0.7rem;
+        width: 100%;
+        font-weight: 700;
+        outline: none;
+        color: var(--VeryDarkViolet);
+    }
+
+    .bottom-layout {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #button-submit {
+        outline: none;
+        height: 4rem;
+        width: 103%;
+        border-radius: 10px;
+        border: 2px solid var(--VeryDarkViolet);
+        background-color: var(--VeryDarkViolet);
+        color: var(--LightGrayishViolet);
+        font-size: 1.125rem;
+        text-transform: capitalize;
+        margin: 3rem auto;
+    }
+
+    .background-imageCard-back {
+        height: 38%;
+        width: 30%;
+        background: url(/static/images/bg-card-back.png) no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 28rem;
+        left: 17rem;
+    }
+
+    .number-cardNumber-back>p {
+        color: var(--Neutral);
+        position: relative;
+        left: 28.5rem;
+        top: 8.8rem;
+        margin: 0;
+        display: inline;
+        font-size: 1.5rem;
+    }
+
+    .background-imageCard-front {
+        height: 38%;
+        width: auto;
+        background: url(/static/images/bg-card-front.png) no-repeat;
+        background-size: contain;
+        position: relative;
+        top: -53rem;
+        left: 10rem;
+    }
+
+    .front-card-logo {
+        width: 100%;
+        height: 20%;
+        background: url(/static/images/card-logo.svg) no-repeat;
+        background-size: contain;
+        position: relative;
+        top: 2rem;
+        left: 2rem;
+    }
+
+    .creditCard-number>p {
+        position: relative;
+        color: var(--Neutral);
+        font-size: 2.5rem;
+        top: 8rem;
+        font-weight: var(--FontWeights);
+        letter-spacing: 1.5px;
+    }
+
+    .creditCard-text {
+        display: flex;
+        justify-content: space-between;
+        width: 75%;
+        position: relative;
+        top: 7rem;
+    }
+
+    #paragraph,
+    #date {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        color: var(--Neutral);
+        letter-spacing: 1px;
+    }
+
+    #date {
+        position: absolute;
+        left: 28rem;
+    }
+
+    .error-message {
+        font-size: 0.8rem;
+        visibility: hidden;
+        color: var(--RedInputErrors);
+    }
+
+    .layout-error {
+        margin-right: 1.5rem;
+    }
+
+
+
+}
