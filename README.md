@@ -35,8 +35,6 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [Flask](https://flask.palletsprojects.com) - Python library
-
 
 ### Continued development
 
@@ -52,6 +50,6 @@ Jinja
 
 ## Author
 
-- Website - [Jan-Willem]()
+- Website - [Jan-Willem](link website)
 - Frontend Mentor - [@jwvdriel](https://www.frontendmentor.io/profile/jwvdriel)
 - Linkedin - [linkedin](https://www.linkedin.com/in/jan-willem-van-driel-04480029)
